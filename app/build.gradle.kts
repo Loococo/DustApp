@@ -1,9 +1,15 @@
+import java.util.Properties
+
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
     alias(libs.plugins.hilt.android)
     kotlin("kapt")
 }
+
+val properties = Properties()
+properties.load(project.rootProject.file("local.properties").inputStream())
+
 
 android {
     namespace = "app.loococo.dustapp"
@@ -17,6 +23,9 @@ android {
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+
+        buildConfigField("String", "API_BASE_URL", properties.getProperty("API_BASE_URL"))
+        buildConfigField("String", "SERVICE_KEY", properties.getProperty("SERVICE_KEY"))
 
         vectorDrawables {
             useSupportLibrary = true

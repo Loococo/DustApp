@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">DustApp</string>
+    <string name="title">서울 미세먼지</string>
+    <string name="pm_value">미세먼지 농도: %s µg/m³</string>
+    <string name="pm_grade">미세먼지 등급: %s</string>
+    <string name="pm_grade_good">좋음 (0 ~ 30 µg/m³)</string>
+    <string name="pm_grade_moderate">보통 (31 ~ 80 µg/m³)</string>
+    <string name="pm_grade_unhealthy">나쁨 (81 ~ 150 µg/m³)</string>
+    <string name="pm_grade_very_unhealthy">매우 나쁨 (151 µg/m³ 이상)</string>
+    <string name="pm_grade_unknown">알 수 없는 등급</string>
 </resources>
