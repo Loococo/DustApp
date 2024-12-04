@@ -3,5 +3,6 @@ plugins {
 }
 
 dependencies {
+    implementation(libs.hilt.javax.inject)
     implementation(libs.jetbrains.kotlinx)
 }
